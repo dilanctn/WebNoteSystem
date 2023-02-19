@@ -1,0 +1,16 @@
+﻿@using WebNoteSystem.Controllers
+@model Class1
+@{
+    ViewData["Title"] = "AddNotes";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<form method="post">
+    <label>Notlar Sayfası</label>
+    <input type="text" asp-for="@Model.Tıtle" class="form-control" />
+    <br />
+    <input type="text" asp-for="@Model.Content" class="form-control" />
+    <br />
+    <button type="submit" class="btn btn-info">Not Ekle</button>
+</form>
+

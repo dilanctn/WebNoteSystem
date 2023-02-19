@@ -1,0 +1,19 @@
+﻿@model WebNoteSystem.Controllers.Class1
+@{
+    ViewData["Title"] = "UpdateNotes";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<h1>Api İle Not Güncelleme Sayfası</h1>
+<form method="post">
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    <label>Not Başlığı</label>
+    @Html.TextBoxFor(x => x.Tıtle, new { @class = "form-control" })
+    <br />
+    <label>Not İçeriği</label>
+    @Html.TextBoxFor(x => x.Content, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-success">Notu Güncelle</button>
+</form>

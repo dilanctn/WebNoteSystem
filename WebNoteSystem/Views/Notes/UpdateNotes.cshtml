@@ -1,0 +1,20 @@
+﻿@model EntityLayer.Conrete.Notes
+@{
+    ViewData["Title"] = "UpdateNotes";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+
+<form method="post">
+    @Html.Label("Not ID")
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+    <br />
+    @Html.Label("Not Başlığı")
+    @Html.TextBoxFor(x => x.Tıtle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Not İçeriği")
+    @Html.TextBoxFor(x => x.Content, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Not Güncelle</button>
+</form>

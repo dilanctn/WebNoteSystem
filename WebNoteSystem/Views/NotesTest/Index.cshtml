@@ -1,0 +1,28 @@
+﻿@using WebNoteSystem.Controllers
+@model List<Class1>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Not Başlığı</th>
+        <th>Not İçeriği</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Tıtle</td>
+            <td>@item.Content</td>
+            <td> <a href="/NotesTest/DeleteNotes/@item.ID" class="btn btn-outline-danger">Sil</a> </td>
+            <td> <a href="/NotesTest/UpdateNotes/@item.ID" class="btn btn-outline-success">Güncelle</a> </td>
+        </tr>
+    }
+</table>
+<a href="/NotesTest/AddNotes/" class="btn btn-outline-primary">Yeni Not Girişi</a>
+
